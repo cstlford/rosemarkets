@@ -1,9 +1,7 @@
 import nodemailer from "nodemailer";
 
 export const handler = async (event, context) => {
-  const { name, email, location, preferences, rating } = JSON.stringify(
-    event.body
-  );
+  const { name, email, location, preferences, rating } = JSON.parse(event.body);
 
   const transporter = nodemailer.createTransport({
     host: "smtppro.zoho.com",

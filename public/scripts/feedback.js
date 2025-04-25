@@ -64,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
           rating: currentRating,
         };
 
-        console.log("Submitting feedback data:", data);
         const res = await fetch("/.netlify/functions/submitFeedback", {
           method: "POST",
           headers: {
